@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap");
+
+:root {
+  --dark-one: #1b1b1b;
+  --dark-two: #5a5a5a;
+  --main-color: #b9de52;
+  --light-one: #fff;
+  --light-two: #f9fafb;
+  --light-three: #f6f7fb;
+}
+body,
+button,
+input,
+textarea {
+  font-family: "Tajawal", sans-serif;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.plans-wrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 60%;
+}
+
+.plan-container {
+  position: relative;
+  width: 100%;
+  max-width: 290px;
+ height: 450px;
+  background-color: var(--light-three);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.plan-container:hover {
+  transform: translateY(-15px);
+}
+
+.plan-container-pro {
+  position: relative;
+  width: 100%;
+  max-width: 290px;
+  height: 480px;
+  background-color: var(--light-three);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.plan-container-pro:hover {
+  transform: translateY(-15px);
+}
+
+
+.plan-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  /* background-color: var(--main-color); */
+}
+.plan-btn {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  background-color: var(--main-color);
+  border-radius: 2rem;
+  font-size: 1.05rem;
+}
+.plan-header-pro {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: var(--main-color);
+  padding: 1rem;
+}
+/* .plan-btn-pro {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+  background-color: var(--light-three);
+  padding: 0.8rem;
+  border-radius: 2rem;
+  font-size: 1.05rem;
+} */
+.plan-discreption{
+  width: 90%;
+}
+.discreption-line{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+.text{
+  margin-right:0.5rem ;
+}
+.fa-check{
+  color: #15a846;
+}
+.fa-xmark{
+  color:#d10a0a;
+}
