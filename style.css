@@ -7,6 +7,7 @@
   --light-one: #fff;
   --light-two: #f9fafb;
   --light-three: #f6f7fb;
+  --box-shadow: 0 0 1.5rem rgba(0, 0, 0, .1);
 }
 body,
 button,
@@ -20,26 +21,29 @@ textarea {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: var(  --light-three);
 }
 .plans-wrap {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  
   align-items: flex-end;
-  width: 60%;
+  width: fit-content;
 }
 
 .plan-container {
   position: relative;
-  width: 100%;
-  max-width: 290px;
+  /* width: 100%; */
+  width: 280px;
  height: 450px;
-  background-color: var(--light-three);
+  background-color: var(--light-one);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
   transition: 0.3s;
 }
 
@@ -49,16 +53,21 @@ textarea {
 
 .plan-container-pro {
   position: relative;
-  width: 100%;
-  max-width: 290px;
+  /* width: 100%; */
+  width: 280px;
   height: 480px;
-  background-color: var(--light-three);
+  background-color:  var(--light-one);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
   transition: 0.3s;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--box-shadow);
+  border:#b9de52;
+  border-style: solid;
 }
 .plan-container-pro:hover {
   transform: translateY(-15px);
@@ -70,7 +79,7 @@ textarea {
   top: 0;
   width: 100%;
   padding: 1rem;
-  /* background-color: var(--main-color); */
+  /* background-color: #5a5a5a09; */
 }
 .plan-btn {
   position: absolute;
@@ -85,20 +94,21 @@ textarea {
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: var(--main-color);
+  /* background-color: var(--main-color); */
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-/* .plan-btn-pro {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 1rem;
-  background-color: var(--light-three);
-  padding: 0.8rem;
-  border-radius: 2rem;
-  font-size: 1.05rem;
-} */
+
 .plan-discreption{
   width: 90%;
+}
+.plan-discreption::before{
+  width: 80%;
+  height: 5px;
+  background-color: #1b1b1b;
 }
 .discreption-line{
   display: flex;
@@ -113,5 +123,53 @@ textarea {
   color: #15a846;
 }
 .fa-xmark{
-  color:#d10a0a;
+  color:#5a5a5a7a;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--dark-one);
+}
+.plan-header-pro .title {
+  font-size: 1.5rem;
+  color: var(--dark-one);
+}
+.plan-price .price-after {
+  color: var(--main-color);
+  margin-top: -1rem;
+  font-size: 4rem;
+  width: fit-content;
+}
+.plan-price .price-after::after {
+  content: "ريال";
+  font-size: 1rem;
+  margin-right: -1rem;
+}
+
+.price-before {
+  color: #d10a0a8f;
+
+  padding-top: 1rem;
+  text-decoration: line-through;
+  font-size: 1.3rem;
+}
+
+.plan-header .plan-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.plan-price .price-after-pro {
+  color: var(--main-color);
+
+  margin-top: -1rem;
+  font-size: 4rem;
+  width: fit-content;
+}
+
+.plan-price .price-after-pro::after {
+  content: "ريال";
+  margin-right: -1rem;
+  font-size: 1rem;
 }
